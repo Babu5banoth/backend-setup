@@ -33,7 +33,7 @@ export async function signUp(user: IUser) {
 }
 
 
-export async function checkEmailOrPhoneExist(email: string) {
+export async function checkEmailExist(email: string) {
     try {
       logger.info(`${TAG}.checkEmailOrPhoneExist()  ==>`, email);
   

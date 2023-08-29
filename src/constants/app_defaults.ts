@@ -1,4 +1,3 @@
-
 export const Pagination = {
   OFFSET: 0,
   LIMIT: 20

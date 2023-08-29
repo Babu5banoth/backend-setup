@@ -3,44 +3,22 @@ import { getNumber, isNull } from '../utils/strings';
 import AppError from '../models/lib/app_error';
 import logger from '../logger';
 
-// 
+
 dotenv.config()
 export const AES_ENC_KEY = process.env.ASE_ENC_KEY ?? 'bf3c199c2470we477d907b1e0917c17c'
-
 export const PORT = process.env.PORT ?? 3307
 export const API_CALL_LOG_FORMAT = process.env.API_CALL_LOG_FORMAT ??
     ':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length]'
 export const LOG_LEVEL = process.env?.LOG_LEVEL ?? 'debug'
+
+//JWT TOKEN
+export const JWT_ACCESS_TOKEN_SECRET = process.env.JWT_ACCESS_TOKEN_SECRET ?? 'careerpediaaccesstkn'
+export const JWT_REFRESH_TOKEN_SECRET = process.env.JWT_REFRESH_TOKEN_SECRET || 'careerpediareftkn';
+export const JWT_ACCESS_TOKEN_EXPIRY_TIME = 2 * 60 * 60
+export const JWT_REFRESH_TOKEN_EXPIRY_TIME = 30 * 24 * 60 * 60
+export const OTP_EXPIRY_TIME = 600
+
 /*MySQL DB config*/
-// export const MYSQL_DATABASE = {
-//     address:'localhost',
-//     port:3306,
-//     username:'root',
-//     password:'396cs17012',
-//     db_name:'careerpedia',
-//     pool_size: process.env.DATABASE_POOL_SIZE ||'30',
-//   };
-
-
-//   export const sqlConfig = {
-//     user: MYSQL_DATABASE.username,
-//     password: MYSQL_DATABASE.password,
-//     database: MYSQL_DATABASE.db_name,
-//     server: MYSQL_DATABASE.address,
-//     port: getNumber(MYSQL_DATABASE.port),
-//     pool: {
-//       max: getNumber(MYSQL_DATABASE.pool_size),
-//       min: 0,
-//       idleTimeoutMillis: 30000
-//     },
-//     options: {
-//       encrypt: false,
-//       trustServerCertificate: true
-//     }
-//   }
-  
-
-  /*MySQL DB config*/
 export const MYSQL_DATABASE = {
   address: process.env.SQL_DATABASE_ADDRESS || 'localhost',
   port: process.env.DATABASE_PORT || 3306,

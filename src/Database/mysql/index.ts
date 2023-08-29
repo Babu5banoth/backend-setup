@@ -1,5 +1,5 @@
-import * as StudentAuth from './lib/auth'
+import * as MentorAuth from './lib/mentor_auth'
 
 export{
-    StudentAuth
+    MentorAuth
 }

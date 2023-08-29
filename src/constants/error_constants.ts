@@ -1,5 +1,3 @@
-// import Ext_Er_msg
-
 export const ErrorCodes = {
     VALIDATION_ERROR: 'invalid_field',
     SYSTEM_ERROR: 'tech_difficulties',
