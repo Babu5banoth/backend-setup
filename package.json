@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "buildts": "tsc --project tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "copyconfig": "cp -r config dist/ && cp -r careerpedia-doc.yml dist/",
-    "build": "npm run buildts && npm run copyconfig",
     "dev": "nodemon --watch src --exec ts-node -r tsconfig-paths/register src/index.ts",
     "start": "node -r tsconfig-paths/register dist/index.js"
   },
