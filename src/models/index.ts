@@ -1,5 +1,4 @@
 import { APIError, IAPIError } from './lib/api_error'
-import  AppError  from './lib/app_error'
 import { IUser,User} from "./lib/auth";
 import { IServiceResponse, ServiceResponse } from './lib/service_response'
 import { BaseRecord, IBaseRecord } from './lib/base_record'
@@ -12,7 +11,7 @@ export{
     ServiceResponse,
     IServiceResponse,
     APIError,
-    AppError,
+    IAPIError,
     BaseRecord,
     IBaseRecord,
     BaseListAPIRequest,
