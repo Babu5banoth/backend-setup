@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch src --exec ts-node -r tsconfig-paths/register src/index.ts",
     "start": "node -r tsconfig-paths/register dist/index.js",
-    "build": "tsc --project tsconfig.json && npm run copyconfig"
+    "build": "tsc --project tsconfig.json && npm run copyconfig",
+    "copyconfig": "cp -r config dist/ && cp -r careerpedia-doc.yml dist/"
   },
   "author": "",
   "license": "ISC",
