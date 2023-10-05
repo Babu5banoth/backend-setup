@@ -40,3 +40,24 @@ export async function signupUser(user: IUser) {
   }
 
 
+
+  // export async function uplaodUser(user) {
+  //   log.info(`${TAG}.signupUser() ==> `, user);
+      
+  //   const serviceResponse: IServiceResponse = new ServiceResponse(HttpStatusCodes.CREATED, '', false);
+  //   try {
+      
+  //     const upload = await MentorAuth.upload(user);
+   
+  //     const data = {
+  //       upload
+  //     }
+     
+  //     serviceResponse.data = data
+  //   } catch (error) {
+  //     log.error(`ERROR occurred in ${TAG}.signupUser`, error);
+  //     serviceResponse.addServerError('Failed to create user due to technical difficulties');
+  //   }
+  //   return serviceResponse;
+  // }
+

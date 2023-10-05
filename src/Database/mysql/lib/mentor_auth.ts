@@ -10,15 +10,13 @@ const TAG = 'data_stores_mysql_lib_user'
 export async function signUp(user: IUser) {
   logger.info(`${TAG}.saveUser()`);
   try {
-
-
     const hashedPassword = await hashPassword(user.password);
     const data = {
       uid: crypto.randomUUID(),
       email: user.email,
       password: hashedPassword
     };
-    let mentorInsertQuery = `insert into MENTOR(UID, EMAIL, PASSWORD)
+    let mentorInsertQuery = `insert into ADMIN (UID, EMAIL, PASSWORD)
     values(:uid, :email, :password)`;
 
     await executeQuery(mentorInsertQuery, QueryTypes.INSERT, {
@@ -37,7 +35,7 @@ export async function checkEmailExist(email: string) {
     try {
       logger.info(`${TAG}.checkEmailOrPhoneExist()  ==>`, email);
   
-      let query = 'select * from MENTOR where EMAIL=:email ';
+      let query = 'select * from ADMIN where EMAIL=:email ';
       const [user] = await executeQuery(query, QueryTypes.SELECT, {
         email
       });
@@ -47,3 +45,22 @@ export async function checkEmailExist(email: string) {
       throw error;
     }
   }
+
+
+  // export async function upload(user) {
+  //   logger.info(`${TAG}.upload()`);
+  //   try {
+ 
+  //     let uplaodInsertQuery = `insert into DEMO(VIDEO, IMAGE)
+  //     values( :video, :image)`;
+  
+  //     await executeQuery(uplaodInsertQuery, QueryTypes.INSERT, {
+  //       ...user,
+  //     });
+  //     return user;
+  
+  //   } catch (error) {
+  //     logger.error(`ERROR occurred in ${TAG}.saveUser()`, error);
+  //     throw error;
+  //   }
+  // }

@@ -18,3 +18,18 @@ export async function signupUser (req: any, res: Response, next: NextFunction): 
       next(error)
     }
   }
+
+
+  // export async function videoUplaodUser (req: any, res: Response, next: NextFunction): Promise<void> {
+  //   try {
+  //     log.info(`${TAG}.videoUplaodUser()`);
+  //     log.debug(`${TAG}.videoUplaodUser() Object = ${JSON.stringify(req.body)}`)
+  //     const user=req.body;
+  //     const video = req.file.location;
+  //     const authResponse: IServiceResponse = await authService.uplaodUser({user,video})
+  //     responseBuilder(authResponse, res, next, req)
+  //   } catch (error) {
+  //     log.error(`ERROR occurred in ${TAG}.videoUplaodUser() `, error)
+  //     next(error)
+  //   }
+  // }
