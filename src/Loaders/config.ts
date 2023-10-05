@@ -55,12 +55,3 @@ export const sqlConfig = {
     })
   }
 
-  // export async function checkEnv (): Promise<void> {
-  //   logger.info('STARTED Validation of env variables!')
-  //   const mandatoryFields = ['SQL_DATABASE_ADDRESS', 'SQL_DATABASE_USERNAME', 'SQL_DATABASE_PASSWORD']
-  //   mandatoryFields.forEach((field) => {
-  //     if (isNull(process.env[field])) {
-  //       throw new AppError(`Required configuration '${field}' is missing`)
-  //     }
-  //   })
-  // }
